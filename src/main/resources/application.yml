@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: camelDemo
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+server:
+  contextPath: /camel-demo
+  port: 8080
+
+camel:
+  component:
+    servlet:
+      mapping:
+        contextPath: /api/*
