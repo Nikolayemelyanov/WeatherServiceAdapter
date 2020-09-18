@@ -1,15 +1,21 @@
 spring:
   application:
-    name: camelDemo
-  jackson:
-    property-naming-strategy: SNAKE_CASE
-
+    name: weatherServiceAdapter
 server:
-  contextPath: /camel-demo
-  port: 8080
-
+    port: 8080
+    host: 'localhost'
 camel:
   component:
     servlet:
       mapping:
-        contextPath: /api/*
+        enabled: true
+        context-path: /*
+weather-service:
+  api:
+    path:
+      adapterServiceA: '/api/serviceA'
+      serviceB: 'https://hostForServiceB.ru/api/serviceB'
+      weatherServiceAPI: 'https://www.gismeteo.ru/api'
+      mockWeatherServiceAPI: 'mock://https:www.gismeteo.ru/api'
+      serviceBhost: 'localhost'
+      serviceBport: '8090'

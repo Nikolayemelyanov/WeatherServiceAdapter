@@ -14,8 +14,14 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.apache.camel.springboot:camel-spring-boot-starter:3.5.0'
-	implementation 'org.apache.camel:camel-gson:3.4.3'
+	implementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.apache.camel.springboot:camel-spring-boot-starter:3.0.0'
+	implementation 'org.apache.camel:camel-test-spring:3.0.0'
+	//implementation 'org.apache.camel:camel-gson:3.4.3'
+	implementation 'org.apache.camel.springboot:camel-servlet-starter:3.0.0'
+	implementation 'org.apache.camel.springboot:camel-jackson-starter:3.0.0'
+	implementation 'org.apache.camel.springboot:camel-http-starter:3.0.0'
+	implementation 'org.apache.camel.springboot:camel-bean-validator-starter:3.0.0'
     implementation 'junit:junit:4.12'
 	implementation 'junit:junit:4.12'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
